@@ -12,11 +12,11 @@ driver = webdriver.Chrome(executable_path="F:\MACHINE LEARNING\chromedriver.exe"
 ##SIGN IN GMAIL
 
 driver.get('http://mail.google.com')
-username= '1002.harshsingh@gmail.com'
+username= 'your email id'
 driver.find_element_by_id("identifierId").send_keys(username)
 driver.find_element_by_id("identifierNext").click()
 time.sleep(3)
-pwd = driver.find_element_by_name('password').send_keys('780vikasKUNJ')
+pwd = driver.find_element_by_name('password').send_keys('your password')
 driver.find_element_by_id('passwordNext').click()
 
 ## COMPOSING E-MAIL
@@ -26,7 +26,7 @@ compose.click()
 
 time.sleep(4)
 toelem=driver.find_element_by_id(":1cj")
-toelem.send_keys("1997harsh.singh@gmail.com")
+toelem.send_keys("sender email id")
 
 subelem=driver.find_element_by_name("subjectbox")
 subelem.send_keys("this is test email . No need to reply ")
